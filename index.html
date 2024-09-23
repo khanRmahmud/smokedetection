@@ -52,28 +52,32 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Deep Learning-based Wildfire Smoke Detection using Uncrewed Aircraft System Imagery</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Khan Raqib Mahmud</a><sup></sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Lingxiao Wang</a><sup></sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Xiyuan Liu</a><sup></sup>,</span>
+                    <span class="author-block">
+                      <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jiahao Li</a><sup></sup>,</span>
+                      <span class="author-block">
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Sunzid Hassan</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Louisiana Tech University, Ruston, LA 71272, USA<br>IEEE International Conference on Ubiquitous Robots (UR), 2024</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://ieeexplore.ieee.org/abstract/document/10597449" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -95,7 +99,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/khanRmahmud/wildfire-smoke-detection" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -129,11 +133,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/Original-image-vid.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        The proposed methodology follows a systematic approach to enhance forest fire smoke detection. Initially, a Forest Segmentator, represented by a Mask R-CNN model, is employed to conduct image segmentation, effectively extracting non-forest regions, such as sky and lake areas. Subsequently, a binary mask is generated based on the segmented image, excluding the identified Non-Forest regions. Finally, a Forest Smoke Detector, utilizing the YOLOv7 model, is applied to detect smoke specifically within the masked image, which now contains only forest regions. This sequential process ensures a focused and accurate detection of smoke specifically within the forested areas of the images. 
       </h2>
     </div>
   </div>
@@ -148,7 +152,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Recent years have seen notable advancements in wildfire smoke detection, particularly in Uncrewed Aircraft Systems (UAS)-based detection employing diverse deep learning (DL) approaches. Despite the promise exhibited by these approaches, the task of detecting smoke from UAS imagery remains challenging due to difficulties in differentiating smoke from similar phenomena such as clouds and water. This work introduces a novel DL-based method for smoke detection from UAS visual observations. The core idea involves segregating forest areas from non-forest regions, such as sky and lake, and exclusively applying smoke detection to forested areas, thus eliminating the chance of misidentifying clouds and water as smoke. Specifically, we utilized a Mask Region-Based Convolutional Neural Network (Mask R-CNN) for semantic segmentation to remove non-forest regions (e.g., sky and lake): Subsequently, a customized You Only Look Once-version 7 (YOLOv7) model was trained to detect smoke within the forest areas. The proposed method was validated on an image dataset collected from our previous prescribed burn experiment, where we extracted 246 images to train both MASK R-CNN and YOLOv7 models. Additionally, we extract another 128 images to validate and confirm the efficacy of our enhanced wildfire smoke detection approach. The test results demonstrate that our proposed approach, employing MASK R-CNN and YOLOv7 models, outperforms the YOLOv7-only model by 25.3\% in precision, 18.7\% in recall, and 45\% in mean Average Precision (mAP).
           </p>
         </div>
       </div>
@@ -162,97 +166,85 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <div id="results-carousel" class="carousel results-carousel" style="display: flex; justify-content: center; align-items: center;">
+        <div class="item" style="max-width: 600px; margin: auto;">
+          <!-- Your image here -->
+          <img src="static/images/final-model-5-1.jpg" alt="An overview of smoke detection using conventional method and our proposed method." style="width: 100%; height: auto; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered">
+            An overview of smoke detection using conventional method and our proposed method.
+          </h2>
+        </div>
+        <div class="item" style="max-width: 600px; margin: auto;">
+          <!-- Your image here -->
+          <img src="static/images/Captureuav512.PNG" alt="Smoke Detection using conventional approach of YOLOv7-only model." style="width: 100%; height: auto; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered">
+            Smoke Detection using conventional approach of YOLOv7-only model.
+          </h2>
+        </div>
+        <div class="item" style="max-width: 600px; margin: auto;">
+          <!-- Your image here -->
+          <img src="static/images/Captureuav512-w.PNG" alt="Our proposed approach using Mask R-CNN and YOLOv7 models." style="width: 100%; height: auto; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered">
+            Our proposed approach using Mask R-CNN and YOLOv7 models.
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
 
 
 
-<!-- Youtube video -->
+
+
 <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Challenges in Wildfire Smoke Detection</h2>
+      <div class="level-set has-text-justified">
+        <p>
+          Wildfire smoke detection using Uncrewed Aircraft Systems (UAS) imagery faces numerous challenges, primarily due to the complex and dynamic nature of environmental backgrounds, such as clouds, water, and varying lighting conditions. Our proposed approach addresses these challenges by integrating semantic segmentation with object detection, enhancing the accuracy of smoke detection in forested areas.
+        </p>
+        <p>
+          Specifically, the Mask R-CNN model effectively segments non-forest regions (e.g., sky and lake), which often share spectral similarities with smoke, reducing false positives. By focusing detection efforts only on forest areas, the YOLOv7 model significantly improves precision, recall, and mean Average Precision (mAP), demonstrating superior performance over conventional single-stage detectors.
+        </p>
+        <p>
+          This innovative methodology not only advances wildfire smoke detection capabilities but also lays the groundwork for future integration into real-time UAS-based surveillance systems, contributing to more effective wildfire management and mitigation strategies.
+        </p>
       </div>
+      <img src="static/images/comparison.png" alt="Comparison of Smoke Detection Approaches" class="blend-img-background center-image"/>
+      <p><strong>Figure:</strong> Comparison of conventional YOLOv7-only detection vs. the proposed method integrating Mask R-CNN for segmentation and YOLOv7 for smoke detection.</p>
     </div>
   </div>
 </section>
+
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
+
+
+<!-- Video Section -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+      <h2 class="title is-3">Misdetection Example Using YOLOv7</h2>
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 800px; margin: auto;">
+        <video autoplay controls muted loop style="width: 100%; height: auto; display: block; margin-bottom: 10px;">
+          <source src="static/videos/output.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h2 class="subtitle has-text-centered" style="text-align: center; line-height: 1.5; word-wrap: break-word; max-width: 800px;">
+          Example of misdetection using YOLOv7: The model incorrectly identifies non-forest regions such as sky and water as smoke, demonstrating the challenge of distinguishing smoke from similar background elements.
+        </h2>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End Video Section -->
+
+
 
 
 
@@ -263,9 +255,9 @@
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">Article</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <iframe  src="static/pdfs/Deep_Learning.pdf" width="100%" height="550">
           </iframe>
         
       </div>
@@ -278,7 +270,14 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@inproceedings{mahmud2024deep,
+        title={Deep Learning-based Wildfire Smoke Detection using Uncrewed Aircraft System Imagery},
+        author={Mahmud, Khan Raqib and Wang, Lingxiao and Liu, Xiyuan and Jiahao, L and Hassan, Sunzid},
+        booktitle={2024 21st International Conference on Ubiquitous Robots (UR)},
+        pages={580--587},
+        year={2024},
+        organization={IEEE}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -291,9 +290,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
           </p>
 
         </div>
